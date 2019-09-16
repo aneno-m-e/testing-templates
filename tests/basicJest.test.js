@@ -4,6 +4,9 @@ var varName = require('filepath')
 //or
 import { functionName } from 'filepath'
 
+//If need be, this is where global variables used by several tests can be defined
+
+
 //basic test function layout
 test('test description', function() {
     //Arrange = set up variables and expected outcomes
@@ -23,13 +26,14 @@ test('Is test working?', function() {
 })
 
 //Test file under test
-test('Test function from linked file', function() {
+test('describe what is being tested', function() {
     //for a simple function returning something
     expect(functionName()).toBe('whatever that function is supposed to return')
     //with argument
     expect(functionName(argument)).toBe('whatever this function is supposed to return when passed that argument')
     // AAA
-    var expected = 'Expected result'    // Arrange - set to expected datatype
+    var argument = 'argument'           // Arrange - set to expected datatypes
+    var expected = 'Expected result'    
     var actual = functionName(argument) //Act
     expect(actual).toBe(expected)       //Assert
 })
