@@ -15,10 +15,23 @@ Jest = Testing Framework
 2. Name all test files with .test.js extension and place then in this folder
 
 Check Jest is in package.json devDependencies. If not, install jest npm package.
+Add script `"test": "jest --watchAll --noStackTrace"`
+`--watchAll` reruns tests as files are modified
+`--noStackTrace` ??
+
+Test suite can be run with: 
+`npm run test` to run all the suite
+[add stuff about running part of the suite]
 
 Check what code lines aren't covered by test with `jest --coverage`
 
 ### Test with Jest - 'Vocabulary'
 
+**Setup**
+`test.skip` will skip that test 
+
+**Assertions**
 toEqual <=> ===
 toBe <=> ==
+
+
