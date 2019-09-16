@@ -1,7 +1,8 @@
-//link file under test
+//link file(s) under test
 var varName = require('filepath')
-//then call functions with varName.functionName()
-//or
+//then call functions with varName.functionName() in tests
+
+//or with ES6
 import { functionName } from 'filepath'
 
 //If need be, this is where global variables used by several tests can be defined
@@ -12,6 +13,10 @@ test('test description', function() {
     //Arrange = set up variables and expected outcomes
     //Act = run the code from tested file
     //Assert = check expected against received
+})
+//can also be written with ES6 synthax
+test('test description', () => {
+    //test
 })
 
 //Setup a test to check that the test file is setup properly.

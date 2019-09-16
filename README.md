@@ -33,5 +33,8 @@ Check what code lines aren't covered by test with `jest --coverage`
 **Assertions**
 toEqual <=> ===
 toBe <=> ==
-
+not.toBe <=> !=
+toHaveLength
+toBeFalsy
+toBeTruthy
 
