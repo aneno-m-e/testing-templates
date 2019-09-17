@@ -39,10 +39,11 @@ not.toBe <=> !=
 toHaveLength <=> `expect(actual.length).toBe(expected)`
 toBeFalsy
 toBeTruthy
+toContain
 
-<!-- ### Test Express server with Supertest
+### Test Express server with Supertest
 
 Check supertest is in package.json *dependencies*. If not, install supertest npm package.
 
- -->
+
 
