@@ -27,8 +27,8 @@ Check what code lines aren't covered by test with `jest --coverage` (but no need
 
 ### Testing with Jest - 'Vocabulary'
 
-**Skip a test**
 `test.skip` will skip that test 
+`test.only` will only run that one test
 
 **Grouping tests of a same function**
 describe('function tested', () => {
@@ -56,7 +56,8 @@ Don't test functions that use `prompt` or `console.log` with an automatic test, 
 ### Testing Handlebars with Cheerio
 
 Check cheerio is in package.json devDependencies. If not, install cheerio npm package.
-
-Focus on important things, don't test everything.
-
 Use `server.test.js` file
+
+Test the most important feature with the most direct test possible (Front end don't want too many tests).
+
+

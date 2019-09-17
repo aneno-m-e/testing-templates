@@ -11,7 +11,8 @@ test('GET + route + expected result', () => {
         .expect(200)
         .end(function(err,res) {
             const $ = cheerio.load(res.test)
-            const actual = $('tag being tested').length  // Get an array of each occurence of an html tag and return its length
+            const actual = $('tag being tested').length  // Get an array of each occurence of an html tag and return its length.
+                                                        // Use $(#idName) to target element by id.
             expect(err).toBeFalsy()
             expect(actual).toBe(expected)
         })
