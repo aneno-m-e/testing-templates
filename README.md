@@ -47,9 +47,16 @@ toContain
 
 ### Testing Express server with Supertest
 
-Check supertest is in package.json *dependencies*. If not, install supertest npm package.
+Check supertest is in package.json devDependencies. If not, install supertest npm package.
 
 ### Testing asynchronous functions
 
 Don't test functions that use `prompt` or `console.log` with an automatic test, do it with a manual test.
 
+### Testing Handlebars with Cheerio
+
+Check cheerio is in package.json devDependencies. If not, install cheerio npm package.
+
+Focus on important things, don't test everything.
+
+Use `server.test.js` file
