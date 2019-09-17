@@ -60,4 +60,18 @@ Use `server.test.js` file
 
 Test the most important feature with the most direct test possible (Front end don't want too many tests).
 
+### Testing knex databases
 
+Start by setting up `test-environment.js`.
+Create test seeds `dbName.js`
+`exports.seed = knex => {
+  return knex('dbName').del()
+    .then(() => {
+      return knex('dbName').insert([
+        { id: 1, task: 'test task 1', completed: false },       //data to be used for the test
+        { id: 2, task: 'test task 2', completed: true },
+        { id: 3, task: 'test task 3', completed: false }
+      ])
+    })
+}
+Use mock db functions to control what is returned.
