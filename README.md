@@ -8,7 +8,7 @@ Write test as you code to check your code
 2. Green test
 3. Refactor
 
-### Test with Jest - Setup
+### Testing with Jest - Setup
 
 Jest = Testing Framework
 1. Need a test folder
@@ -23,14 +23,18 @@ Test suite can be run with:
 `npm run test` to run all the suite
 [add stuff about running part of the suite]
 
-Check what code lines aren't covered by test with `jest --coverage`
+Check what code lines aren't covered by test with `jest --coverage` (but no need to cover 100% of the code)
 
-### Test with Jest - 'Vocabulary'
+### Testing with Jest - 'Vocabulary'
 
-**Setup**
+**Skip a test**
 `test.skip` will skip that test 
-it?
-describe
+
+**Grouping tests of a same function**
+describe('function tested', () => {
+    test('first thing being tested', (done) => {test function, ending with done()})
+    test('second thing being tested', (done) => {test function, ending with done()})
+})
 
 **Assertions**
 toEqual <=> ===
@@ -41,9 +45,11 @@ toBeFalsy
 toBeTruthy
 toContain
 
-### Test Express server with Supertest
+### Testing Express server with Supertest
 
 Check supertest is in package.json *dependencies*. If not, install supertest npm package.
 
+### Testing asynchronous functions
 
+Don't test functions that use `prompt` or `console.log` with an automatic test, do it with a manual test.
 
