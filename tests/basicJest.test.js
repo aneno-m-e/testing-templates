@@ -1,11 +1,14 @@
 //link file(s) under test
-var varName = require('filepath')
+const varName = require('filepath')
 //then call functions with varName.functionName() in tests
+//or link
+const varName = require('filepath').functionName
 
 //or with ES6
 import { functionName } from 'filepath'
 
 //If need be, this is where global variables used by several tests can be defined
+//or imported from data files
 
 
 //basic test function layout
@@ -22,9 +25,8 @@ test('test description', () => {
 //Setup a test to check that the test file is setup properly.
 test('Is test working?', function() {
     // Examples:
-    expect(2 + 2 === 4).toBeTruthy()
-    expect(3 * 3).toBe(9)
-
+    expect(true).toBeTruthy()
+    
     const result = ['dave', 'sharon']                   //Arrange
     result.push('flora')                                //Act
     expect(result).toEqual(['dave', 'sharon', 'flora']) //Assert

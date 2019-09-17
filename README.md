@@ -29,12 +29,20 @@ Check what code lines aren't covered by test with `jest --coverage`
 
 **Setup**
 `test.skip` will skip that test 
+it?
+describe
 
 **Assertions**
 toEqual <=> ===
 toBe <=> ==
 not.toBe <=> !=
-toHaveLength
+toHaveLength <=> `expect(actual.length).toBe(expected)`
 toBeFalsy
 toBeTruthy
+
+<!-- ### Test Express server with Supertest
+
+Check supertest is in package.json *dependencies*. If not, install supertest npm package.
+
+ -->
 
