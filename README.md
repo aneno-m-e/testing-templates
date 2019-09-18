@@ -44,6 +44,7 @@ toHaveLength <=> `expect(actual.length).toBe(expected)`
 toBeFalsy
 toBeTruthy
 toContain
+toMatch <=> do a partial comparison of a string (ex: expect('grapefruits').toMatch('fruit'))
 
 ### Testing Express server with Supertest
 
@@ -62,16 +63,10 @@ Test the most important feature with the most direct test possible (Front end do
 
 ### Testing knex databases
 
+Two approaches are possible:
+    1. Using mock (to come)
+    2. Use test seeds (`dbName.js`) to control what the functions under test will return
+
 Start by setting up `test-environment.js`.
-Create test seeds `dbName.js`
-`exports.seed = knex => {
-  return knex('dbName').del()
-    .then(() => {
-      return knex('dbName').insert([
-        { id: 1, task: 'test task 1', completed: false },       //data to be used for the test
-        { id: 2, task: 'test task 2', completed: true },
-        { id: 3, task: 'test task 3', completed: false }
-      ])
-    })
-}
-Use mock db functions to control what is returned.
+Create a seeds folder in the tests folder and create test seeds
+Example
