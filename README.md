@@ -64,9 +64,10 @@ Test the most important feature with the most direct test possible (Front end do
 ### Testing knex databases
 
 Two approaches are possible:
-    1. Using mock (to come)
+    1. Using mock (not detailed here)
     2. Use test seeds (`dbName.js`) to control what the functions under test will return
 
 Start by setting up `test-environment.js`.
-Create a seeds folder in the tests folder and create test seeds
-Example
+Create a seeds folder in the tests folder and create test seeds.
+
+You can choose to test the server and db in the same test file (integrative testing).
