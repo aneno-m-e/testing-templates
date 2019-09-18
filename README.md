@@ -70,4 +70,24 @@ Two approaches are possible:
 Start by setting up `test-environment.js`.
 Create a seeds folder in the tests folder and create test seeds.
 
-You can choose to test the server and db in the same test file (integrative testing).
+You can choose to test the server and db in the same test file (integrative testing). The test would call the routes calling the db functions.
+-> cf https://github.com/roa-2019/client-side-rendering/blob/solution/server/tests/server.test.js
+https://github.com/roa-2019/client-side-rendering/blob/testing-client-api/server/tests/server.test.js
+https://github.com/roa-2019/client-side-rendering/blob/test-google-api/server/tests/server.test.js
+
+### Testing APIs
+https://github.com/roa-2019/client-side-rendering/blob/testing-client-api/client/api.test.js
+
+### Testing React with enzyme
+https://github.com/roa-2019/memory/tree/solution/tests
+https://github.com/roa-2019/enspiraled/tree/solution/tests
+https://github.com/roa-2019/taxonomic-routing/tree/solution/tests
+
+https://github.com/roa-2019/boilerplate-fullstack/blob/master/tests/client/App.test.js
+
+### Testing Redux
+https://github.com/roa-2019/testing-redux-example
+https://github.com/roa-2019/sweet-as-beers/tree/solution/test
+
+### Testing Auth?
+https://github.com/roa-2019/jwt-auth/tree/solution/tests
